@@ -1,0 +1,8 @@
+fastapi[standard]==0.115.4
+sqlmodel>=0.0.22
+asyncpg>=0.30.0
+aiokafka>=0.11.0
+
+# dev
+pytest
+httpx
