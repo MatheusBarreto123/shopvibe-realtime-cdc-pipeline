@@ -3,7 +3,7 @@
 Ingestão de pedidos em tempo real para um e-commerce: **PostgreSQL → Debezium (CDC) → Kafka → MinIO (camada bronze)**.
 100% containerizado com Docker Compose e **sem nenhuma linha de código de aplicação**: o pipeline inteiro é configuração.
 
-> Projeto desenvolvido para o MBA (caso de uso ShopVibe). Os números da empresa são fictícios.
+> Projeto desenvolvido para a Pós (caso de uso ShopVibe). Os números da empresa são fictícios.
 
 ## O problema
 
@@ -31,7 +31,6 @@ PostgreSQL ──(WAL)──> Debezium ──> Kafka ──> Kafka Connect (S3 S
 - **Implementado:** Postgres → Debezium → Kafka → MinIO (bronze).
 - **Evolução (apenas desenhada):** bronze → silver → gold; processamento em streaming para painel de vendas ao vivo e alerta de fraude; cache de estoque para o site.
 
-Diagrama completo: `docs/desenho-solucao.png`
 
 ## Pré-requisitos
 
@@ -48,8 +47,6 @@ git clone https://github.com/MatheusBarreto123/shopvibe-realtime-cdc-pipeline.gi
 cd shopvibe-realtime-cdc-pipeline
 copy .env.example .env
 ```
-
-Edite o `.env` se quiser trocar as credenciais de laboratório.
 
 **2. Suba os contêineres**
 
